@@ -5,6 +5,41 @@
     box-sizing: border-box;
 }
 /*reset*/
+body{
+    background-color: rgb(31, 27, 27);
+}
 /*header*/
+h1{
+    width: 15.625rem;
+    text-align: center;
+    margin: 1.875rem auto 0 auto;
+    padding: .625rem 1.25rem;
+    background-color: red;
+    border-radius: .9375rem;
+    color: white;
+}
+/*header*/
+/*main*/
+.box{
+    border: 3px solid red;
+    border-radius: .9375rem;
+    height: 500px;
+    margin: 2.5rem auto;
+    background-color: rgb(238, 186, 186);
+}
+.row{
+    font-size: 1.125rem;
+    margin: 10px 30px;
+    border-bottom: 1px solid black;
 
-/*header*/
+}
+i{
+    padding-right: .625rem;
+}
+.row:hover{
+    cursor: pointer;
+}
+.checks{
+    text-decoration: line-through;
+}
+/*main*/
