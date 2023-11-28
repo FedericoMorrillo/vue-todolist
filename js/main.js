@@ -4,7 +4,6 @@ const { createApp } = Vue
 
   createApp({
     data() {
-        
         const items = [
             {
                 text: "andare a fare la spesa",
@@ -21,6 +20,7 @@ const { createApp } = Vue
         ]
       return {
         items,
+        inputText: "",
       }
     },
     methods:{
@@ -32,6 +32,16 @@ const { createApp } = Vue
         //attraverso l' array rimuoviamo 1 oggetto selezionato partendo dall' indice scelto
         removeToDo(index){
             this.items.splice(index,1);
+        },
+        // aggiungiamo all' array il nuovo todo dall' input
+        addToDo() {
+            if(this.inputText.trim() !== ""){
+                this.items.push({
+                    text: this.inputText,
+                    done: false,
+                })
+                this.inputText = "";
+            }
         }
     }
   }).mount('#app')

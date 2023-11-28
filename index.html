@@ -26,11 +26,18 @@
                 To Do List
             </h1>
         </header>
-        <main class="box col-sm-12 col-md-8 col-lg-6">
+        <main>
+            <div class="input-group mb-3">
+                <input v-model="inputText" type="text" class="form-control" placeholder="aggiungi To do" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button @click="addToDo()" class="btn btn-outline-secondary" type="button" id="button-addon2">+</button>
+              </div>
+            <div class="box col-sm-12 col-md-8 col-lg-6">
                 <div v-for="(item, index) in items" class="row d-flex flex-nowrap justify-between align-items-center">
                     <span :class="{ 'checks': item.done }" @click="checks(item)">{{item.text}}</span>
-                    <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
+                    <span class="icon"><i class="fa-solid fa-xmark" @click="removeToDo(index)"></i></span>
+                    
                 </div>
+            </div>
         </main>
     </div>
     <!--vue js-->
